@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## pokeca
+image:string
+name:string
+detail:text
+price:string
+box:references
+genre:references
+rare:references
 
-Things you may want to cover:
+## rare
+rarity:string
 
-* Ruby version
+## box
+name:string
+place:string
+release:date
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## genre
+name:string
