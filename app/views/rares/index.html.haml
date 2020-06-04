@@ -1,0 +1,16 @@
+%p#notice= notice
+%h1 Rares
+%table
+  %thead
+    %tr
+      %th Rarity
+      %th{:colspan => "3"}
+  %tbody
+    - @rares.each do |rare|
+      %tr
+        %td= rare.rarity
+        %td= link_to 'Show', rare
+        %td= link_to 'Edit', edit_rare_path(rare)
+        %td= link_to 'Destroy', rare, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Rare', new_rare_path

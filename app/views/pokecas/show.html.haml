@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %strong Image:
+  = @pokeca.image
+%p
+  %strong Name:
+  = @pokeca.name
+%p
+  %strong Detail:
+  = @pokeca.detail
+%p
+  %strong Price:
+  = @pokeca.price
+%p
+  %strong Box:
+  = @pokeca.box
+%p
+  %strong Genre:
+  = @pokeca.genre
+%p
+  %strong Rare:
+  = @pokeca.rare
+= link_to 'Edit', edit_pokeca_path(@pokeca)
+|
+= link_to 'Back', pokecas_path

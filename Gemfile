@@ -63,5 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'activeadmin'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'haml-rails'
 gem 'carrierwave'
 gem 'rmagick' , require: 'RMagick'
