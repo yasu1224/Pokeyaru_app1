@@ -19,7 +19,7 @@
   <tbody>
     <% @pokecas.each do |pokeca| %>
       <tr>
-        <td><%= image_tag pokeca.image.url width: "100px", alt: "", id: "", class: ""%></td>
+        <td><%= image_tag pokeca.image.url width: "100px", alt: "", id: "", class: "img-thumbnail" %></td>
         <td><%= pokeca.name %></td>
         <td><%= pokeca.detail %></td>
         <td><%= pokeca.price %></td>
