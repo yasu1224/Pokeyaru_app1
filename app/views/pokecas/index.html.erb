@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Pokecas</h1>
@@ -19,7 +20,7 @@
   <tbody>
     <% @pokecas.each do |pokeca| %>
       <tr>
-        <td><%= image_tag pokeca.image.url width: "100px", alt: "", id: "", class: ""%></td>
+        <td><%= image_tag pokeca.image.thumb.url width: "100px", alt: "", id: "", class: "card_image" %>
         <td><%= pokeca.name %></td>
         <td><%= pokeca.detail %></td>
         <td><%= pokeca.price %></td>
@@ -33,7 +34,7 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Pokeca', new_pokeca_path %>
+
