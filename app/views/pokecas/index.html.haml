@@ -1,0 +1,20 @@
+.jumbotron.jumbotron-fluid
+  .container
+    %h1.display-4.text-body ポケモンカードコレクション
+    %p.lead.text-body 欲しい情報がすぐわかる！レアカード情報がいっぱい！
+.container
+  %h2.text-center カード一覧（新着順）
+  - @pokecas.each_slice(3) do |pokecas|
+    %ul.list-inline
+      - pokecas.each do |pokeca|
+        %li.list-inline-item= image_tag pokeca.image.thumb.url
+
+  .card.mb-3{:style => "max-width: 300px;"}
+    .row.no-gutters
+      .col-md-4
+        %img.card-img{:alt => "...", :src => "..."}/
+      .col-md-8
+        .card-body
+          %h5.card-title pokeca.name
+          %p.card-text box
+          %p.card-text genre
