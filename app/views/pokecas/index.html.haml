@@ -3,18 +3,17 @@
     %h1.display-4.text-body ポケモンカードコレクション
     %p.lead.text-body 欲しい情報がすぐわかる！レアカード情報がいっぱい！
 .container
-  %h2.text-center カード一覧（新着順）
+  %h2.text-center.mb-3 コレクションカード一覧（新着順）
   - @pokecas.each_slice(3) do |pokecas|
-    %ul.list-inline
+    %ul.list-group.list-group-horizontal-md
       - pokecas.each do |pokeca|
-        %li.list-inline-item= image_tag pokeca.image.thumb.url
-
-  .card.mb-3{:style => "max-width: 300px;"}
-    .row.no-gutters
-      .col-md-4
-        %img.card-img{:alt => "...", :src => "..."}/
-      .col-md-8
-        .card-body
-          %h5.card-title pokeca.name
-          %p.card-text box
-          %p.card-text genre
+        %li.list-inline-item.card.mb-3.mx-auto{:style => "width: 20rem;"}
+          .row
+            .col-md-5.mw-100.mh-100
+              .card-img
+                = image_tag pokeca.image.thumb.url
+            .col-md-7
+              .card-body
+                %h5.card-title.text-truncate= pokeca.name
+                %p.card-text.text-black-50.text-truncate= pokeca.box.name
+                %p.card-text.text-black-50.text-truncate= link_to '詳細', pokeca
