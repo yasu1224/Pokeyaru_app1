@@ -1,9 +1,30 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{:href => root_path} POKEYARU
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => root_path}
+          カード一覧
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => "boxes"} 拡張BOXから探す
+      %li.nav-item
+        %a.nav-link{:href => "genres"} ジャンルから探す
+      %li.nav-item
+        %a.nav-link{:href => "rares"} レアリティから探す
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+
+
 .jumbotron.jumbotron-fluid
   .container
     %h1.display-4.text-body ポケモンカードコレクション
     %p.lead.text-body 欲しい情報がすぐわかる！レアカード情報がいっぱい！
 .container
-  %h2.text-center.mb-3 コレクションカード一覧（新着順）
+  %h2.text-center.mb-3 コレクションカード一覧
   - @pokecas.each_slice(3) do |pokecas|
     %ul.list-group.list-group-horizontal-md
       - pokecas.each do |pokeca|
@@ -16,4 +37,4 @@
               .card-body
                 %h5.card-title.text-truncate= pokeca.name
                 %p.card-text.text-black-50.text-truncate= pokeca.box.name
-                %p.card-text.text-black-50.text-truncate= link_to '詳細', pokeca
+                %button.btn-outline-primary= link_to '詳細', pokeca
