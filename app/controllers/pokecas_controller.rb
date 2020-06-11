@@ -4,7 +4,7 @@ class PokecasController < ApplicationController
   # GET /pokecas
   # GET /pokecas.json
   def index
-    @pokecas = Pokeca.all.order(id: "DESC")
+    @pokecas = Pokeca.all.order(id: "DESC").page(params[:page]).per(12)
   end
 
   # GET /pokecas/1
