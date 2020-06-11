@@ -14,11 +14,13 @@ class PokecasController < ApplicationController
 
   # GET /pokecas/new
   def new
+    redirect_to root_path
     @pokeca = Pokeca.new
   end
 
   # GET /pokecas/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /pokecas

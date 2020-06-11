@@ -7,11 +7,11 @@
       %li.nav-item
         %a.nav-link{:href => root_path} カード一覧
       %li.nav-item
-        %a.nav-link{:href => "boxes"} 拡張BOXから探す
+        %a.nav-link{:href => boxes_path} 拡張BOXから探す
       %li.nav-item
-        %a.nav-link{:href => "genres"} ジャンルから探す
+        %a.nav-link{:href => genres_path} ジャンルから探す
       %li.nav-item
-        %a.nav-link{:href => "rares"} レアリティから探す
+        %a.nav-link{:href => rares_path} レアリティから探す
     %form.form-inline.my-2.my-lg-0
       %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
@@ -39,6 +39,5 @@
 %p
   %strong Rare:
   = @pokeca.rare
-= link_to 'Edit', edit_pokeca_path(@pokeca)
 |
 = link_to 'Back', pokecas_path

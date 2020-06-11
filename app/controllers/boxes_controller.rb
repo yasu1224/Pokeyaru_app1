@@ -14,11 +14,13 @@ class BoxesController < ApplicationController
 
   # GET /boxes/new
   def new
+    redirect_to root_path
     @box = Box.new
   end
 
   # GET /boxes/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /boxes
