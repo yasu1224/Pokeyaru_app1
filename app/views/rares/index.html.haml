@@ -17,20 +17,14 @@
     %form.form-inline.my-2.my-lg-0
       %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
-
-%p#notice= notice
-%h1 Rares
-%table
-  %thead
-    %tr
-      %th Rarity
-      %th{:colspan => "3"}
-  %tbody
-    - @rares.each do |rare|
+.container
+  %h2.text-center.mb-3.mt-3 レアリティ一覧
+  %table.table.table-striped.text-nowrap
+    %thead
       %tr
-        %td= rare.rarity
-        %td= link_to 'Show', rare
-        %td= link_to 'Edit', edit_rare_path(rare)
-        %td= link_to 'Destroy', rare, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Rare', new_rare_path
+        %th Rarity
+        %th{:colspan => "3"}
+    %tbody
+      - @rares.each do |rare|
+        %tr
+          %td= rare.rarity
