@@ -47,8 +47,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: Pokeyaru_app1_production
+#   username: Pokeyaru_app1
+#   password: <%= ENV['POKEYARU_APP1_DATABASE_PASSWORD'] %>
+
+
 production:
   <<: *default
-  database: Pokeyaru_app1_production
-  username: Pokeyaru_app1
+  url: <%= ENV['Pokeyaru_app1_production'] %>
+  username: <%= ENV['Pokeyaru_app1'] %>
   password: <%= ENV['POKEYARU_APP1_DATABASE_PASSWORD'] %>
+  master_key: <%= ENV['RAILS_MASTER_KEY'] %>

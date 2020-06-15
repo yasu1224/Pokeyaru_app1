@@ -13,5 +13,7 @@ module PokeyaruApp
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
     config.app_generators.scaffold_controller = :scaffold_controller
+    config.assets.initialize_on_precompile = false
+    config.assets.compile = true
   end
 end
