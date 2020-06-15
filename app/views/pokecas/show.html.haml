@@ -1,0 +1,40 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{:href => root_path} POKEYARU
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item
+        %a.nav-link{:href => root_path} カード一覧
+      %li.nav-item
+        %a.nav-link{:href => boxes_path} 拡張BOXから探す
+      %li.nav-item
+        %a.nav-link{:href => genres_path} ジャンルから探す
+      %li.nav-item
+        %a.nav-link{:href => rares_path} レアリティから探す
+    %form.form-inline.my-2.my-lg-0
+      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+
+.container.text-center.mb-3
+  = image_tag @pokeca.image.url
+  %p
+    %strong カード名:
+    = @pokeca.name
+  %p
+    %strong カード詳細:
+    = @pokeca.detail
+  %p
+    %strong 相場:
+    = @pokeca.price
+  %p
+    %strong 収録ボックス:
+    = @pokeca.box.name
+  %p
+    %strong ジャンル:
+    = @pokeca.genre.name
+  %p
+    %strong レアリティ:
+    = @pokeca.rare.rarity
+
+  = link_to '戻る', pokecas_path

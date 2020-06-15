@@ -14,11 +14,13 @@ class GenresController < ApplicationController
 
   # GET /genres/new
   def new
+    redirect_to root_path
     @genre = Genre.new
   end
 
   # GET /genres/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /genres

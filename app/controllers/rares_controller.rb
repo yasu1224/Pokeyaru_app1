@@ -14,11 +14,13 @@ class RaresController < ApplicationController
 
   # GET /rares/new
   def new
+    redirect_to root_path
     @rare = Rare.new
   end
 
   # GET /rares/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /rares

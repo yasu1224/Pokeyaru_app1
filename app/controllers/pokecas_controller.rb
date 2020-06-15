@@ -4,7 +4,8 @@ class PokecasController < ApplicationController
   # GET /pokecas
   # GET /pokecas.json
   def index
-    @pokecas = Pokeca.all
+    @q = Pokeca.ransack(params[:q])
+    @pokecas = @q.result.order(id: "DESC").page(params[:page]).per(12)
   end
 
   # GET /pokecas/1
@@ -14,11 +15,13 @@ class PokecasController < ApplicationController
 
   # GET /pokecas/new
   def new
+    redirect_to root_path
     @pokeca = Pokeca.new
   end
 
   # GET /pokecas/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /pokecas
