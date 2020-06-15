@@ -17,9 +17,9 @@
 
     = search_form_for @q do |f|
       %form.form-inline.my-2.my-lg-0
-        = f.search_field :name_cont, placeholder: "ポケモン名を入力", class: "form-control mr-sm-2"
+        = f.search_field :name_cont, placeholder: "カード名で検索", class: "form-control mr-sm-2"
       = f.submit "検索", class: "btn btn-outline-success my-2 my-sm-0"
-      
+
 .jumbotron.jumbotron-fluid
   .container
     %h1.display-4.text-body ポケモンカードコレクション

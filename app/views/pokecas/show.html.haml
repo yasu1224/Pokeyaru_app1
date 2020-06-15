@@ -16,28 +16,25 @@
       %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
 
-
-%p#notice= notice
-%p
-  %strong Image:
+.container.text-center.mb-3
   = image_tag @pokeca.image.url
-%p
-  %strong Name:
-  = @pokeca.name
-%p
-  %strong Detail:
-  = @pokeca.detail
-%p
-  %strong Price:
-  = @pokeca.price
-%p
-  %strong Box:
-  = @pokeca.box
-%p
-  %strong Genre:
-  = @pokeca.genre
-%p
-  %strong Rare:
-  = @pokeca.rare
-|
-= link_to 'Back', pokecas_path
+  %p
+    %strong カード名:
+    = @pokeca.name
+  %p
+    %strong カード詳細:
+    = @pokeca.detail
+  %p
+    %strong 相場:
+    = @pokeca.price
+  %p
+    %strong 収録ボックス:
+    = @pokeca.box.name
+  %p
+    %strong ジャンル:
+    = @pokeca.genre.name
+  %p
+    %strong レアリティ:
+    = @pokeca.rare.rarity
+
+  = link_to '戻る', pokecas_path
