@@ -14,6 +14,8 @@
         %a.nav-link{:href => rares_path}
           レアリティから探す
           %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{:href => new_admin_user_session_path} 管理画面
     %form.form-inline.my-2.my-lg-0
       %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
