@@ -69,5 +69,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'ransack'
+gem 'dotenv-rails'
 
 gem 'rails_12factor', group: :production
