@@ -10,8 +10,8 @@
 
 ## デプロイ
 * URL : https://pokeyaru.herokuapp.com/
-<!-- * ID test@test
-* PW testtest2 -->
+* ID test@test
+* PW testtest2
 
 ## 制作背景
 * ポケモンカードのネット販売（Ebay、メルカリ、ヤフオク等）をするにあたり、海外などに出品する際に英名や必要な情報を出品する度にカードの情報を検索するのが手間だった為、
