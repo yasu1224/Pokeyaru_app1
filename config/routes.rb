@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+  get 'contacts/create'
   root to: "pokecas#index"
   resources :pokecas, only: [:index, :show]
   resources :rares, only: [:index, :show]
