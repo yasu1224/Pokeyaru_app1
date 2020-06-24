@@ -8,6 +8,8 @@
 * 管理人は写真やデータの保存、修正、削除が出来ます。
 * それ以外のユーザーはコレクション情報を閲覧する事が可能です。
 
+https://user-images.githubusercontent.com/59867630/85509244-956f3480-b630-11ea-9c95-8f2ae7e40dd9.gif
+
 ## デプロイ
 * URL : https://pokeyaru.herokuapp.com/
 * ID test@test
